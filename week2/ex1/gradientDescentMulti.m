@@ -25,7 +25,7 @@ for iter = 1:num_iters
         for m = 1:rows_length
             hx = 0;
             for z = 1:columns_length
-                hx = hx+ X(m,z)*theta(z);
+                hx = hx + X(m,z)*theta(z);
             end;
             upper_part = upper_part + (hx - y(m))*X(m,n);
         end;
