@@ -7,15 +7,18 @@ function J = computeCost(X, y, theta)
 m = length(y); % number of training examples
 
 % You need to return the following variables correctly 
-J = 0;
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
+part1 = 0;
+for i = 1:m
+    hx = X(i,1)*theta(1) + X(i,2)*theta(2);
+    part1 = part1 + (hx-y(i))^2;
+end;
 
-
-
+J = part1/(2*m);
 
 % =========================================================================
 
